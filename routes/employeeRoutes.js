@@ -2,12 +2,19 @@ const express = require('express')
 const router = express.Router()
 const employeeController = require('../employeeController/employeeController')
 
-const {addNewEmployee, getEmployeeList, importAll,deleteEmployee, updateEmployeeDetails, getEmployee} = employeeController
+const {
+  addNewEmployee,
+  getEmployeeList,
+  importAll,
+  deleteEmployee,
+  updateEmployeeDetails,
+  getEmployee,
+} = employeeController
 
 // console.log('route page reached working')
 
 //get all emplyees
-router.get('/list',getEmployeeList)
+router.get('/list', getEmployeeList)
 
 //get one employee
 router.get('/:id', getEmployee)
